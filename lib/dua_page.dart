@@ -26,6 +26,19 @@ class _DuaPageState extends State<DuaPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pushNamed(context, '/satu');
+          },
+          child: Icon(
+            Icons.close,
+            color: Colors.black,
+          ),
+        ),
+        title: Text('kode unik hlmn 2'),
+        backgroundColor: Colors.white,
+      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(10),
@@ -99,7 +112,7 @@ class _DuaPageState extends State<DuaPage> {
                             });
                           }),
                     ),
-                    SizedBox(height: 30),
+                    SizedBox(height: 10),
                     //text untuk kata kata dibawah carousel
                     Text(
                       'Dapatkan Hadiah langsung dengan submit kode unik!',
@@ -118,6 +131,7 @@ class _DuaPageState extends State<DuaPage> {
                       ),
                       textAlign: TextAlign.center,
                     ),
+                    SizedBox(height: 10),
                   ],
                 ),
               ),

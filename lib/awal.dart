@@ -48,10 +48,22 @@ class AwalPage extends StatelessWidget {
             ),
             TextButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/satu');
+                Navigator.pushNamed(context, '/satu'); //SATU = HLMN DASHBOARD POIN
+                                                      //DUA = HLMN KODE UNIK
+                                                      //TIGA = HLMN LOGIN
+                                                      //EMPAT = HLMN AKUN / PROFIL
               },
               child: Text(
                 'tampilan kerja tuker poin',
+                style: TextStyle(fontSize: 25),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/tiga');
+              },
+              child: Text(
+                'profil',
                 style: TextStyle(fontSize: 25),
               ),
             ),

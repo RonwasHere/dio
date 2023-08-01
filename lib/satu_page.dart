@@ -28,6 +28,7 @@ class _SatuPageState extends State<SatuPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Complicated Image Slider Demo'),
+        backgroundColor: Color(0xff70421e),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -133,16 +134,21 @@ class _SatuPageState extends State<SatuPage> {
                     children: [
                       Text(
                         'Total Akumulasi Poin Anda',
-                        style: TextStyle(fontSize: 20),
+                        style:
+                            TextStyle(fontSize: 20, color: Color(0xff70421e)),
                       ),
                       Text(
                         '4 POIN',
                         style: TextStyle(
-                            fontSize: 25, fontWeight: FontWeight.bold),
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xff70421e)),
                       ),
+                      SizedBox(height: 5),
                       Text(
                         'Total Poin Dari 1 Juli - Saat Ini',
-                        style: TextStyle(fontSize: 20),
+                        style:
+                            TextStyle(fontSize: 14, color: Color(0xff70421e)),
                       ),
                     ],
                   ),
@@ -155,6 +161,9 @@ class _SatuPageState extends State<SatuPage> {
                 child: TextButton(
                   style: TextButton.styleFrom(
                     backgroundColor: Color(0xff70421e),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
                   ),
                   onPressed: () {
                     Navigator.pushNamed(context, '/dua');
@@ -197,28 +206,29 @@ class _SatuPageState extends State<SatuPage> {
                       SizedBox(height: 5),
                       Text(
                         'Data Terakir Terupdate Pada',
-                        style: TextStyle(
-                          fontSize: 15,
-                        ),
+                        style:
+                            TextStyle(fontSize: 15, color: Color(0xff70421e)),
                       ),
                       Text(
                         'Dapatkan 10 poin untuk setiap kode unik terdaftar dan menangkan',
-                        style: TextStyle(
-                          fontSize: 15,
-                        ),
+                        style:
+                            TextStyle(fontSize: 15, color: Color(0xff70421e)),
                         textAlign: TextAlign.center,
                       ),
                       Text(
                         'hadiah e-wallet @ rp 2.000.000 TOP 5 setiap bulannya',
-                        style: TextStyle(fontSize: 15),
+                        style:
+                            TextStyle(fontSize: 15, color: Color(0xff70421e)),
                       ),
                       Text(
                         'Belum ada TOP 5',
-                        style: TextStyle(fontSize: 15),
+                        style:
+                            TextStyle(fontSize: 15, color: Color(0xff70421e)),
                       ),
                       Text(
                         '*Leader Board ini Bersifat Sementara dan Belum Final',
-                        style: TextStyle(fontSize: 15),
+                        style:
+                            TextStyle(fontSize: 15, color: Color(0xff70421e)),
                       ),
                       SizedBox(height: 15),
                       Text(
@@ -240,27 +250,7 @@ class _SatuPageState extends State<SatuPage> {
         ),
       ),
       //BOTTOM NAVIGATION BAR
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Menu",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.coffee),
-            label: "Tukar Poin",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.reorder),
-            label: "Riwayat",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: "Akun",
-          ),
-        ],
-      ),
+     
       backgroundColor: Color(0xfffdf8ea), //untuk warna background
     );
   }

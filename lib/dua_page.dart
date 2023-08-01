@@ -27,6 +27,7 @@ class _DuaPageState extends State<DuaPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         leading: GestureDetector(
           onTap: () {
             Navigator.pushNamed(context, '/satu');
@@ -37,7 +38,7 @@ class _DuaPageState extends State<DuaPage> {
           ),
         ),
         title: Text('kode unik hlmn 2'),
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xfffdf8ea),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -144,10 +145,10 @@ class _DuaPageState extends State<DuaPage> {
                     height: 60,
                     width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
+                      borderRadius: BorderRadius.circular(10),
                       border: Border.all(
                         color: Color(0xff70421e),
-                        width: 6,
+                        width: 3,
                       ),
                     ),
                     //untuk nomer kode untik
@@ -180,8 +181,13 @@ class _DuaPageState extends State<DuaPage> {
                     child: TextButton(
                       style: TextButton.styleFrom(
                         backgroundColor: Color(0xff70421e),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/tiga');
+                      },
                       child: Text(
                         'Kirim ',
                         style: TextStyle(
@@ -197,7 +203,7 @@ class _DuaPageState extends State<DuaPage> {
           ),
         ),
       ),
-      backgroundColor: Color(0xfffdf8ea), //untuk warna background
+      backgroundColor: Color(0xfffdf8ea), //untuk warna background body aplikasi
     );
   }
 }

@@ -11,10 +11,11 @@ class DuaPage extends StatefulWidget {
 class _DuaPageState extends State<DuaPage> {
   int _current = 0;
   final CarouselController _controller = CarouselController();
-
   final List<String> imgList = [
     // AssetImage('assets/capture.png'),
     // 'assets/capture.png'
+    'assets/coffee.PNG',
+    'assets/coffee.PNG',
     'assets/coffee.PNG',
     'assets/coffee.PNG',
     'assets/coffee.PNG',
@@ -70,8 +71,13 @@ class _DuaPageState extends State<DuaPage> {
                                   child: Stack(
                                     children: <Widget>[
                                       //Image untuk carousel
-                                      Image.asset(item,
-                                          fit: BoxFit.cover, width: 1000.0),
+                                      Image.asset(
+                                        item,
+                                        fit: BoxFit.cover,
+                                        width: 1000.0,
+                                        height:
+                                            MediaQuery.of(context).size.height,
+                                      ),
                                       Positioned(
                                         bottom: 0.0,
                                         left: 0.0,

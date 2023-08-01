@@ -13,7 +13,7 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   int pageIndex = 0;
-  List<Widget> pageList = <Widget>[
+  List<Widget> pageList = [
     // TigaPage(),
     SatuPage(),
     DuaPage(),
@@ -24,6 +24,7 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       body: pageList[pageIndex],
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Color(0xfffdf8ea),
         currentIndex: pageIndex,
         onTap: (value) {
           setState(() {

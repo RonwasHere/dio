@@ -1,3 +1,4 @@
+import 'package:dio/theme.dart/theme_file.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -10,7 +11,7 @@ class DuaPage extends StatefulWidget {
 
 class _DuaPageState extends State<DuaPage> {
   int _current = 0;
-  final CarouselController _controller = CarouselController();
+  // final CarouselController _controller = CarouselController();
   final List<String> imgList = [
     // AssetImage('assets/capture.png'),
     // 'assets/capture.png'
@@ -34,15 +35,14 @@ class _DuaPageState extends State<DuaPage> {
         elevation: 0,
         leading: GestureDetector(
           onTap: () {
-            Navigator.pushNamed(context, '/satu');
+            Navigator.pushNamed(context, '/mainscreen');
           },
           child: Icon(
             Icons.close,
-            color: Colors.black,
+            color: kBlackColor,
           ),
         ),
-        title: Text('kode unik hlmn 2'),
-        backgroundColor: Color(0xfffdf8ea),
+        backgroundColor: kWhiteColor,
       ),
       body: SingleChildScrollView(
         child: Padding(

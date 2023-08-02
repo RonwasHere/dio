@@ -1,3 +1,4 @@
+import 'package:dio/theme.dart/theme_file.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -32,8 +33,8 @@ class _SatuPageState extends State<SatuPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Complicated Image Slider Demo'),
-        backgroundColor: Color(0xff70421e),
+        elevation: 0,
+        backgroundColor: kWhiteColor,
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -126,10 +127,10 @@ class _SatuPageState extends State<SatuPage> {
               ),
               //batas akir carousel
               SizedBox(height: 10),
-              //Container untuk poin + 3 kata-kata
+              //Container untuk poin + 4 kata-kata
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: 100,
+                height: 150,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
                   border: Border.all(
@@ -142,6 +143,11 @@ class _SatuPageState extends State<SatuPage> {
                   padding: EdgeInsets.all(10),
                   child: Column(
                     children: [
+                      Text(
+                        'Member@gmail.com',
+                        style:
+                            TextStyle(fontSize: 20, color: Color(0xff70421e)),
+                      ),
                       Text(
                         'Total Akumulasi Poin Anda',
                         style:

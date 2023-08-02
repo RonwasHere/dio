@@ -1,10 +1,8 @@
-import 'package:dio/awal.dart';
 import 'package:dio/dua_page.dart';
 import 'package:dio/empat_page.dart';
 import 'package:dio/gambar.dart';
-import 'package:dio/gambar_dua.dart';
 import 'package:dio/gambar_empat.dart';
-import 'package:dio/gambar_tiga.dart';
+import 'package:dio/lima_page.dart';
 import 'package:dio/main/main_screen.dart';
 import 'package:dio/satu_page.dart';
 import 'package:dio/tiga_page.dart';
@@ -41,8 +39,9 @@ class _MyAppState extends State<MyApp> {
           '/dua': (context) => DuaPage(), //KODE UNIK
           '/tiga': (context) => TigaPage(), //LOGIN
           '/empat': (context) => EmpatPage(), //PROFIL / AKUN
-          '/mainscreen': (context) => MainScreen(),  //buat bottom navbar di klik bisa pindah hlmn 
-          
+          '/mainscreen': (context) =>
+              MainScreen(), //buat bottom navbar di klik bisa pindah hlmn
+          '/lima': (context) => LimaPage(), //hlmn notifikasi
         },
       ),
     );

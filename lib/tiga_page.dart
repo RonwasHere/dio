@@ -1,3 +1,4 @@
+import 'package:dio/theme.dart/theme_file.dart';
 import 'package:flutter/material.dart';
 
 class TigaPage extends StatelessWidget {
@@ -10,7 +11,8 @@ class TigaPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xfffdf8ea),
+        elevation: 0,
+        backgroundColor: kWhiteColor,
       ),
       body: SingleChildScrollView(
         child: Padding(

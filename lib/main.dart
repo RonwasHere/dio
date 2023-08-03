@@ -1,7 +1,7 @@
 import 'package:dio/dua_page.dart';
 import 'package:dio/empat_page.dart';
-import 'package:dio/gambar.dart';
-import 'package:dio/gambar_empat.dart';
+import 'package:dio/gambar_tidak_dipakek/gambar.dart';
+import 'package:dio/gambar_tidak_dipakek/gambar_empat.dart';
 import 'package:dio/lima_page.dart';
 import 'package:dio/main/main_screen.dart';
 import 'package:dio/satu_page.dart';

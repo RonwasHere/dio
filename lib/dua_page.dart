@@ -129,7 +129,7 @@ class _DuaPageState extends State<DuaPage> {
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
-                        color: Color(0xff70421e),
+                        color: kBrownColor,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -137,7 +137,7 @@ class _DuaPageState extends State<DuaPage> {
                       'Masukkan kode unik yang tertera pada kemasan dan menangkan \nhadiah langsung Pulsa, Logam Mulia hingga Iphone 14',
                       style: TextStyle(
                         fontSize: 15,
-                        color: Color(0xff70421e),
+                        color: kBrownColor,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -156,7 +156,7 @@ class _DuaPageState extends State<DuaPage> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       border: Border.all(
-                        color: Color(0xff70421e),
+                        color: kBrownColor,
                         width: 3,
                       ),
                     ),
@@ -189,7 +189,7 @@ class _DuaPageState extends State<DuaPage> {
                     width: MediaQuery.of(context).size.width,
                     child: TextButton(
                       style: TextButton.styleFrom(
-                        backgroundColor: Color(0xff70421e),
+                        backgroundColor: kBrownColor,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
@@ -201,7 +201,7 @@ class _DuaPageState extends State<DuaPage> {
                         'Kirim ',
                         style: TextStyle(
                           fontSize: 20,
-                          color: Colors.white,
+                          color: kWhiteColor,
                         ),
                       ),
                     ),
@@ -212,7 +212,7 @@ class _DuaPageState extends State<DuaPage> {
           ),
         ),
       ),
-      backgroundColor: Color(0xfffdf8ea), //untuk warna background body aplikasi
+      backgroundColor: kWhiteColor, //untuk warna background body aplikasi
     );
   }
 }

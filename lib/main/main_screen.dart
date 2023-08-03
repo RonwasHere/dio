@@ -51,7 +51,7 @@ class _MainScreenState extends State<MainScreen> {
             label: "Voucher",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(Icons.person), //HLMN PROFIL  
             label: "Akun",
           ),
         ],

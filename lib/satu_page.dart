@@ -137,7 +137,7 @@ class _SatuPageState extends State<SatuPage> {
                     color: (Colors.brown[200])!,
                     width: 2,
                   ),
-                  color: Color(0xfffff8e8),
+                  color: kWhiteColor,
                 ),
                 child: Padding(
                   padding: EdgeInsets.all(10),
@@ -145,26 +145,34 @@ class _SatuPageState extends State<SatuPage> {
                     children: [
                       Text(
                         'Member@gmail.com',
-                        style:
-                            TextStyle(fontSize: 20, color: Color(0xff70421e)),
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: kBrownColor,
+                        ),
                       ),
                       Text(
                         'Total Akumulasi Poin Anda',
-                        style:
-                            TextStyle(fontSize: 20, color: Color(0xff70421e)),
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: kBrownColor,
+                        ),
                       ),
+                      SizedBox(height: 10),
                       Text(
                         '4 POIN',
                         style: TextStyle(
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xff70421e)),
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                          color: kBrownColor,
+                        ),
                       ),
-                      SizedBox(height: 5),
+                      SizedBox(height: 20),
                       Text(
                         'Total Poin Dari 1 Juli - Saat Ini',
-                        style:
-                            TextStyle(fontSize: 14, color: Color(0xff70421e)),
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: kBrownColor,
+                        ),
                       ),
                     ],
                   ),
@@ -176,7 +184,7 @@ class _SatuPageState extends State<SatuPage> {
                 width: MediaQuery.of(context).size.width,
                 child: TextButton(
                   style: TextButton.styleFrom(
-                    backgroundColor: Color(0xff70421e),
+                    backgroundColor: kBrownColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
@@ -216,35 +224,42 @@ class _SatuPageState extends State<SatuPage> {
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xff70421e),
+                          color: kBrownColor,
                         ),
                       ),
                       SizedBox(height: 5),
                       Text(
                         'Data Terakir Terupdate Pada',
-                        style:
-                            TextStyle(fontSize: 15, color: Color(0xff70421e)),
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: kBrownColor,
+                        ),
                       ),
                       Text(
                         'Dapatkan 10 poin untuk setiap kode unik terdaftar dan menangkan',
-                        style:
-                            TextStyle(fontSize: 15, color: Color(0xff70421e)),
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: kBrownColor,
+                        ),
                         textAlign: TextAlign.center,
                       ),
                       Text(
                         'hadiah e-wallet @ rp 2.000.000 TOP 5 setiap bulannya',
-                        style:
-                            TextStyle(fontSize: 15, color: Color(0xff70421e)),
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: kBrownColor,
+                        ),
                       ),
                       Text(
                         'Belum ada TOP 5',
-                        style:
-                            TextStyle(fontSize: 15, color: Color(0xff70421e)),
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: kBrownColor,
+                        ),
                       ),
                       Text(
                         '*Leader Board ini Bersifat Sementara dan Belum Final',
-                        style:
-                            TextStyle(fontSize: 15, color: Color(0xff70421e)),
+                        style: TextStyle(fontSize: 15, color: kBrownColor),
                       ),
                       SizedBox(height: 15),
                       Text(
@@ -266,7 +281,7 @@ class _SatuPageState extends State<SatuPage> {
         ),
       ),
 
-      backgroundColor: Color(0xfffdf8ea), //untuk warna background
+      backgroundColor: kWhiteColor, //untuk warna background
     );
   }
 }

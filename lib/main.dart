@@ -1,5 +1,6 @@
 import 'package:dio/dua_page.dart';
 import 'package:dio/empat_page.dart';
+import 'package:dio/enam_page.dart';
 import 'package:dio/gambar_tidak_dipakek/gambar.dart';
 import 'package:dio/gambar_tidak_dipakek/gambar_empat.dart';
 import 'package:dio/lima_page.dart';
@@ -29,12 +30,8 @@ class _MyAppState extends State<MyApp> {
         routes: {
           '/': (context) => TigaPage(), //untuk ke main
           // '/': (context) => AwalPage(), unccoment ini untuk kesemua akses
-          '/gambar': (context) => GambarPage(),
-          // '/gambardua' : (context) => GambarDua(),
-          // '/gambartiga': (context) => GambarTiga(
-          //     url:
-          //         'https://images.unsplash.com/photo-1420593248178-d88870618ca0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bmF0dXJhbHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80'),
-          '/gambarempat': (context) => GambarEmpat(),
+          // '/gambar': (context) => GambarPage(),
+          // '/gambarempat': (context) => GambarEmpat(),
           '/satu': (context) => SatuPage(), // DASBOARD
           '/dua': (context) => DuaPage(), //KODE UNIK
           '/tiga': (context) => TigaPage(), //LOGIN
@@ -42,6 +39,7 @@ class _MyAppState extends State<MyApp> {
           '/mainscreen': (context) =>
               MainScreen(), //buat bottom navbar di klik bisa pindah hlmn
           '/lima': (context) => LimaPage(), //hlmn notifikasi
+          '/enam': (context) => EnamPage(), //hlmn notifikasi
         },
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:dio/dua_page.dart';
 import 'package:dio/empat_page.dart';
+import 'package:dio/enam_page.dart';
 import 'package:dio/lima_page.dart';
 import 'package:dio/satu_page.dart';
 import 'package:dio/theme.dart/theme_file.dart';
@@ -18,9 +19,10 @@ class _MainScreenState extends State<MainScreen> {
     // TigaPage(),
     // LimaPage(), //hlmn available vouche
     SatuPage(), //hlmn ddashboard
-    DuaPage(), //sementara diisi agak biasa diklik bottom navbar
+    // DuaPage(), //sementara diisi agak biasa diklik bottom navbar
+    EnamPage(),
     LimaPage(), //hlmn NOTIFIKASI
-    EmpatPage(), 
+    EmpatPage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -51,7 +53,7 @@ class _MainScreenState extends State<MainScreen> {
             label: "Voucher",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person), //HLMN PROFIL  
+            icon: Icon(Icons.person), //HLMN PROFIL
             label: "Akun",
           ),
         ],

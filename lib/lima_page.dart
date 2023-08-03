@@ -13,19 +13,7 @@ class _LimaPageState extends State<LimaPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        leading: GestureDetector(
-          onTap: () {
-            Navigator.pushNamed(context, '/mainscreen');
-          },
-          child: Icon(
-            Icons.close,
-            color: kBlackColor,
-          ),
-        ),
-        backgroundColor: kWhiteColor,
-      ),
+      appBar: _appBar(context), //methid app bar ada dibawh
       body: Column(
         children: [
           Expanded(
@@ -61,4 +49,33 @@ class _LimaPageState extends State<LimaPage> {
       backgroundColor: kWhiteColor,
     );
   }
+
+  //app bar
+  AppBar _appBar(BuildContext context) {
+    return AppBar(
+      elevation: 0,
+      leading: GestureDetector(
+        onTap: () {
+          Navigator.pushNamed(context, '/mainscreen');
+        },
+        child: Icon(
+          Icons.close,
+          color: kBlackColor,
+        ),
+      ),
+      backgroundColor: kWhiteColor,
+    );
+  }
+}
+
+//untuk ListTile / ListView Builder
+//untuk kedepannya jika ambil data dr api
+class Notifikasi {
+  final String notifikasi;
+  final String content;
+
+  const Notifikasi({
+    required this.notifikasi,
+    required this.content,
+  });
 }

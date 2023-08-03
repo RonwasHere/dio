@@ -16,10 +16,11 @@ class _MainScreenState extends State<MainScreen> {
   int pageIndex = 0;
   List<Widget> pageList = [
     // TigaPage(),
-    SatuPage(),
-    LimaPage(), //hlmn available voucher
-    DuaPage(),
-    EmpatPage(),
+    // LimaPage(), //hlmn available vouche
+    SatuPage(), //hlmn ddashboard
+    DuaPage(), //sementara diisi agak biasa diklik bottom navbar
+    LimaPage(), //hlmn NOTIFIKASI
+    EmpatPage(), 
   ];
   @override
   Widget build(BuildContext context) {
@@ -38,15 +39,15 @@ class _MainScreenState extends State<MainScreen> {
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.home), //HOME DASHBOARD POINT //SATU.DART
             label: "Menu",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.confirmation_num),
+            icon: Icon(Icons.confirmation_num), //HLMN VOUCHER
             label: "Tukar Poin",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.coffee),
+            icon: Icon(Icons.notifications), //HLMN NOTIF // LIMA.DART
             label: "Voucher",
           ),
           BottomNavigationBarItem(

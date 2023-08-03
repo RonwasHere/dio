@@ -18,8 +18,8 @@ class _MainScreenState extends State<MainScreen> {
   List<Widget> pageList = [
     // TigaPage(),
     // LimaPage(), //hlmn available vouche
-    SatuPage(), //hlmn ddashboard
     // DuaPage(), //sementara diisi agak biasa diklik bottom navbar
+    SatuPage(), //hlmn ddashboard
     EnamPage(),
     LimaPage(), //hlmn NOTIFIKASI
     EmpatPage(),

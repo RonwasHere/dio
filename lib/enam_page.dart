@@ -66,8 +66,11 @@ class _EnamPageState extends State<EnamPage> {
                     margin: EdgeInsets.only(
                         left: 20, right: 20, top: 10, bottom: 10),
                     height: 200,
-                    color: kBrownColor,
-                  )
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: kWhiteColor, width: 3),
+                    ),
+                  ),
                 ],
                 onExpansionChanged: (bool expanded) {
                   setState(() {

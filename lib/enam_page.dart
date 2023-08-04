@@ -6,12 +6,12 @@ import 'package:flutter/material.dart';
 //kode untuk expansion widget (voucher)
 // class Item {
 //   Item({
-//     required this.header,
-//     required this.body,
+//     required this.headerText,
+//     required this.expandedText,
 //     this.isExpanded = false,
 //   });
-//   final String header;
-//   final String body;
+//   final String headerText;
+//   final String expandedText;
 //   bool isExpanded;
 // }
 
@@ -33,35 +33,73 @@ class _EnamPageState extends State<EnamPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ExpansionTile(
-              backgroundColor: kOrangeColor,
-              collapsedBackgroundColor: kWhiteColor,
-              // collapsedBackgroundColor: _customExpansionTile
-              //     ? kBlackColor
-              //     : kWhiteColor, //ini posisi awal ketika apps dibuka
-              title: Text(
-                'Supresso',
-                style:
-                    TextStyle(color: _customText ? kWhiteColor : kBlackColor),
+            //ListView Tulisan SUPRESSO
+            ListTileTheme(
+              tileColor: kOrangeColor,
+              child: ExpansionTile(
+                collapsedBackgroundColor: kWhiteColor,
+                collapsedIconColor: kBlackColor,
+                title: Text(
+                  'Supresso',
+                  style:
+                      TextStyle(color: _customText ? kWhiteColor : kBlackColor),
+                ),
+                trailing: Icon(
+                  _customIcon
+                      ? Icons.keyboard_arrow_up
+                      : Icons.keyboard_arrow_down,
+                ),
+                //CUSTOM CONTAINER U/ DISKON, KETERANGAN + TOMBOL CLAIM
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(
+                        left: 20, right: 20, top: 10, bottom: 10),
+                    height: 200,
+                    color: kBrownColor,
+                  )
+                ],
+                onExpansionChanged: (bool expanded) {
+                  setState(() {
+                    _customIcon = expanded;
+                    _customText = expanded;
+                    // _customExpansionTile = expanded;
+                  });
+                },
               ),
-              trailing: Icon(
-                _customIcon
-                    ? Icons.keyboard_arrow_up
-                    : Icons.keyboard_arrow_down,
+            ),
+            SizedBox(height: 20),
+            ListTileTheme(
+              tileColor: kOrangeColor,
+              child: ExpansionTile(
+                collapsedBackgroundColor: kWhiteColor,
+                collapsedIconColor: kBlackColor,
+                title: Text(
+                  'Supresso',
+                  style:
+                      TextStyle(color: _customText ? kWhiteColor : kBlackColor),
+                ),
+                trailing: Icon(
+                  _customIcon
+                      ? Icons.keyboard_arrow_up
+                      : Icons.keyboard_arrow_down,
+                ),
+                //CUSTOM CONTAINER U/ DISKON, KETERANGAN + TOMBOL CLAIM
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(
+                        left: 20, right: 20, top: 10, bottom: 10),
+                    height: 200,
+                    color: kBrownColor,
+                  )
+                ],
+                onExpansionChanged: (bool expanded) {
+                  setState(() {
+                    _customIcon = expanded;
+                    _customText = expanded;
+                    // _customExpansionTile = expanded;
+                  });
+                },
               ),
-              children: [
-                Container(
-                  height: 100,
-                  color: kBrownColor,
-                )
-              ],
-              onExpansionChanged: (bool expanded) {
-                setState(() {
-                  _customIcon = expanded;
-                  _customText = expanded;
-                  // _customExpansionTile = expanded;
-                });
-              },
             ),
           ],
         ),

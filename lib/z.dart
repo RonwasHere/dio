@@ -84,3 +84,39 @@
 //               ],
 //             ),
 //           ),
+//=============================================================================================
+//======================== EXPANSION TILE================================
+// ExpansionTile(
+//               backgroundColor: kOrangeColor,
+//               collapsedBackgroundColor: kWhiteColor,
+//               collapsedIconColor: kBlackColor,
+//               // collapsedBackgroundColor: _customExpansionTile
+//               //     ? kBlackColor
+//               //     : kWhiteColor, //ini posisi awal ketika apps dibuka
+//               title: Text(
+//                 'Supresso',
+//                 style:
+//                     TextStyle(color: _customText ? kWhiteColor : kBlackColor),
+//               ),
+//               trailing: Icon(
+//                 _customIcon
+//                     ? Icons.keyboard_arrow_up
+//                     : Icons.keyboard_arrow_down,
+//               ),
+//               //CUSTOM CONTAINER U/ DISKON, KETERANGAN + TOMBOL CLAIM
+//               children: [
+//                 Container(
+//                   margin:
+//                       EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
+//                   height: 200,
+//                   color: kBrownColor,
+//                 )
+//               ],
+//               onExpansionChanged: (bool expanded) {
+//                 setState(() {
+//                   _customIcon = expanded;
+//                   _customText = expanded;
+//                   // _customExpansionTile = expanded;
+//                 });
+//               },
+//             ),

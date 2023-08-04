@@ -24,16 +24,7 @@ class EnamPage extends StatefulWidget {
 
 class _EnamPageState extends State<EnamPage> {
   bool _customIcon = false;
-
-  //untuk expansion
-  // static const loremipsum =
-  //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua';
-  // final List<Item> items = [
-  //   Item(header: 'Panel 1', body: loremipsum),
-  //   Item(header: 'Panel 2', body: loremipsum),
-  //   Item(header: 'Panel 3', body: loremipsum),
-  //   Item(header: 'Panel 4', body: loremipsum),
-  // ];
+  bool _customText = false;
 
   @override
   Widget build(BuildContext context) {
@@ -42,19 +33,33 @@ class _EnamPageState extends State<EnamPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ExpansionTile( 
-              title: Text('Expansion Tile'),
+            ExpansionTile(
+              backgroundColor: kOrangeColor,
+              collapsedBackgroundColor: kWhiteColor,
+              // collapsedBackgroundColor: _customExpansionTile
+              //     ? kBlackColor
+              //     : kWhiteColor, //ini posisi awal ketika apps dibuka
+              title: Text(
+                'Supresso',
+                style:
+                    TextStyle(color: _customText ? kWhiteColor : kBlackColor),
+              ),
               trailing: Icon(
-                _customIcon ? Icons.arrow_drop_up : Icons.arrow_drop_down,
+                _customIcon
+                    ? Icons.keyboard_arrow_up
+                    : Icons.keyboard_arrow_down,
               ),
               children: [
-                ListTile(
-                  title: Text('This is tile number 2'),
-                ),
+                Container(
+                  height: 100,
+                  color: kBrownColor,
+                )
               ],
               onExpansionChanged: (bool expanded) {
                 setState(() {
                   _customIcon = expanded;
+                  _customText = expanded;
+                  // _customExpansionTile = expanded;
                 });
               },
             ),

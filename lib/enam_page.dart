@@ -70,6 +70,37 @@ class _EnamPageState extends State<EnamPage> {
                       borderRadius: BorderRadius.circular(10),
                       border: Border.all(color: kWhiteColor, width: 3),
                     ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          '1',
+                          style: TextStyle(color: kBlackColor),
+                        ),
+                        Column(
+                          children: [
+                            Text('Diskon 10 % (DISCON 10%)'),
+                            Text('Tukarkan Dengan 10 point'),
+                          ],
+                        ),
+                        Expanded(
+                          child: TextButton(
+                            style: TextButton.styleFrom(
+                              backgroundColor: kDarkGreyColor,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                            ),
+                            onPressed: () {},
+                            child: Text(
+                              'CLAIM',
+                              style:
+                                  TextStyle(fontSize: 15, color: kWhiteColor),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
                 onExpansionChanged: (bool expanded) {

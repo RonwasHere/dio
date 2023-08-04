@@ -14,7 +14,15 @@ import 'package:flutter/material.dart';
 //   final String expandedText;
 //   bool isExpanded;
 // }
+class NamaVoucher {
+  final String title;
+  NamaVoucher({required this.title});
+}
 
+var data = "PANDAN GARDEN";
+var data1 = "INDRACO STORE";
+
+//======
 class EnamPage extends StatefulWidget {
   const EnamPage({super.key});
 
@@ -25,6 +33,8 @@ class EnamPage extends StatefulWidget {
 class _EnamPageState extends State<EnamPage> {
   bool _customIcon = false;
   bool _customText = false;
+  bool _customText1 = false;
+  bool _customText2 = false;
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +50,7 @@ class _EnamPageState extends State<EnamPage> {
                 collapsedBackgroundColor: kWhiteColor,
                 collapsedIconColor: kBlackColor,
                 title: Text(
-                  'Supresso',
+                  'SUPRESSO',
                   style:
                       TextStyle(color: _customText ? kWhiteColor : kBlackColor),
                 ),
@@ -51,6 +61,7 @@ class _EnamPageState extends State<EnamPage> {
                 ),
                 //CUSTOM CONTAINER U/ DISKON, KETERANGAN + TOMBOL CLAIM
                 children: [
+                  SizedBox(height: 10),
                   Container(
                     margin: EdgeInsets.only(
                         left: 20, right: 20, top: 10, bottom: 10),
@@ -67,45 +78,80 @@ class _EnamPageState extends State<EnamPage> {
                 },
               ),
             ),
-            SizedBox(height: 20),
-            ListTileTheme(
-              tileColor: kOrangeColor,
-              child: ExpansionTile(
-                collapsedBackgroundColor: kWhiteColor,
-                collapsedIconColor: kBlackColor,
-                title: Text(
-                  'Supresso',
-                  style:
-                      TextStyle(color: _customText ? kWhiteColor : kBlackColor),
-                ),
-                trailing: Icon(
-                  _customIcon
-                      ? Icons.keyboard_arrow_up
-                      : Icons.keyboard_arrow_down,
-                ),
-                //CUSTOM CONTAINER U/ DISKON, KETERANGAN + TOMBOL CLAIM
-                children: [
-                  Container(
-                    margin: EdgeInsets.only(
-                        left: 20, right: 20, top: 10, bottom: 10),
-                    height: 200,
-                    color: kBrownColor,
-                  )
-                ],
-                onExpansionChanged: (bool expanded) {
-                  setState(() {
-                    _customIcon = expanded;
-                    _customText = expanded;
-                    // _customExpansionTile = expanded;
-                  });
-                },
-              ),
-            ),
+            ListTileTheme2(),
+            ListTileTheme3(),
+            //ListView Tulisan SUPRESSO
           ],
         ),
       ),
 
-      backgroundColor: kWhiteColor,
+      backgroundColor: kGreyColor,
+    );
+  }
+
+  ListTileTheme ListTileTheme2() {
+    return ListTileTheme(
+      tileColor: kOrangeColor,
+      child: ExpansionTile(
+        collapsedBackgroundColor: kWhiteColor,
+        collapsedIconColor: kBlackColor,
+        title: Text(
+          'PANDAN GARDEN',
+          style: TextStyle(color: _customText1 ? kWhiteColor : kBlackColor),
+        ),
+        trailing: Icon(
+          _customIcon ? Icons.keyboard_arrow_up : Icons.keyboard_arrow_down,
+        ),
+        //CUSTOM CONTAINER U/ DISKON, KETERANGAN + TOMBOL CLAIM
+        children: [
+          SizedBox(height: 10),
+          Container(
+            margin: EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
+            height: 200,
+            color: kBrownColor,
+          )
+        ],
+        onExpansionChanged: (bool expanded) {
+          setState(() {
+            _customIcon = expanded;
+            _customText1 = expanded;
+            // _customExpansionTile = expanded;
+          });
+        },
+      ),
+    );
+  }
+
+  ListTileTheme ListTileTheme3() {
+    return ListTileTheme(
+      tileColor: kOrangeColor,
+      child: ExpansionTile(
+        collapsedBackgroundColor: kWhiteColor,
+        collapsedIconColor: kBlackColor,
+        title: Text(
+          'INDRACO STORE',
+          style: TextStyle(color: _customText2 ? kWhiteColor : kBlackColor),
+        ),
+        trailing: Icon(
+          _customIcon ? Icons.keyboard_arrow_up : Icons.keyboard_arrow_down,
+        ),
+        //CUSTOM CONTAINER U/ DISKON, KETERANGAN + TOMBOL CLAIM
+        children: [
+          SizedBox(height: 10),
+          Container(
+            margin: EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
+            height: 200,
+            color: kBrownColor,
+          )
+        ],
+        onExpansionChanged: (bool expanded) {
+          setState(() {
+            _customIcon = expanded;
+            _customText2 = expanded;
+            // _customExpansionTile = expanded;
+          });
+        },
+      ),
     );
   }
 

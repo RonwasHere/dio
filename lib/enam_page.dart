@@ -1,4 +1,5 @@
-import 'package:dio/theme.dart/theme_file.dart';
+import 'package:dio/theme/theme_file.dart';
+import 'package:dio/widget/container_voucher.dart';
 import 'package:flutter/material.dart';
 
 //HLMN VOUCHER
@@ -36,6 +37,13 @@ class _EnamPageState extends State<EnamPage> {
   bool _customText1 = false;
   bool _customText2 = false;
 
+  //untuk widget voucher
+  // Widget voucher (){
+  //   int number,
+  //   String title,
+  //   String description,
+  // }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,46 +70,11 @@ class _EnamPageState extends State<EnamPage> {
                 //CUSTOM CONTAINER U/ DISKON, KETERANGAN + TOMBOL CLAIM
                 children: [
                   SizedBox(height: 10),
-                  Container(
-                    margin: EdgeInsets.only(
-                        left: 20, right: 20, top: 10, bottom: 10),
-                    height: 200,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: kWhiteColor, width: 3),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          '1',
-                          style: TextStyle(color: kBlackColor),
-                        ),
-                        Column(
-                          children: [
-                            Text('Diskon 10 % (DISCON 10%)'),
-                            Text('Tukarkan Dengan 10 point'),
-                          ],
-                        ),
-                        Expanded(
-                          child: TextButton(
-                            style: TextButton.styleFrom(
-                              backgroundColor: kDarkGreyColor,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                            ),
-                            onPressed: () {},
-                            child: Text(
-                              'CLAIM',
-                              style:
-                                  TextStyle(fontSize: 15, color: kWhiteColor),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  ContainerVoucher(
+                      //method ada di folder widget
+                      number: '1',
+                      title: 'Diskon 10% (DISC 10%)',
+                      subtitle: 'Tukarkan dengan 10 point'),
                 ],
                 onExpansionChanged: (bool expanded) {
                   setState(() {
@@ -139,11 +112,18 @@ class _EnamPageState extends State<EnamPage> {
         //CUSTOM CONTAINER U/ DISKON, KETERANGAN + TOMBOL CLAIM
         children: [
           SizedBox(height: 10),
-          Container(
-            margin: EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
-            height: 200,
-            color: kBrownColor,
-          )
+          ContainerVoucher(
+            //method ada di folder widget
+            number: '1',
+            title: 'Diskon 20% (DISC 20%)',
+            subtitle: 'Tukarkan dengan 20 point',
+          ),
+          SizedBox(height: 5),
+          ContainerVoucher(
+              //method ada di folder widget
+              number: '2',
+              title: 'Cashback Rp.15000 (DISC Rp 15.000)',
+              subtitle: 'Tukarkan dengan 5 point'),
         ],
         onExpansionChanged: (bool expanded) {
           setState(() {
@@ -172,11 +152,12 @@ class _EnamPageState extends State<EnamPage> {
         //CUSTOM CONTAINER U/ DISKON, KETERANGAN + TOMBOL CLAIM
         children: [
           SizedBox(height: 10),
-          Container(
-            margin: EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
-            height: 200,
-            color: kBrownColor,
-          )
+          ContainerVoucher(
+            //method ada di folder widget
+            number: '1',
+            title: 'Diskon 10% (DISC 10%)',
+            subtitle: 'Tukarkan dengan 10 point',
+          ),
         ],
         onExpansionChanged: (bool expanded) {
           setState(() {

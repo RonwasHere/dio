@@ -1,4 +1,4 @@
-import 'package:dio/theme.dart/theme_file.dart';
+import 'package:dio/theme/theme_file.dart';
 import 'package:flutter/material.dart';
 
 //HALAMAN NOTIFIKASI

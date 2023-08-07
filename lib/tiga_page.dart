@@ -69,7 +69,7 @@ class TigaPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 40),
+              SizedBox(height: 70),
               //copyright watermark
               Text(
                 '2023 INDRACO All right reserved',

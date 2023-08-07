@@ -15,13 +15,6 @@ import 'package:flutter/material.dart';
 //   final String expandedText;
 //   bool isExpanded;
 // }
-class NamaVoucher {
-  final String title;
-  NamaVoucher({required this.title});
-}
-
-var data = "PANDAN GARDEN";
-var data1 = "INDRACO STORE";
 
 //======
 class EnamPage extends StatefulWidget {
@@ -36,13 +29,6 @@ class _EnamPageState extends State<EnamPage> {
   bool _customText = false;
   bool _customText1 = false;
   bool _customText2 = false;
-
-  //untuk widget voucher
-  // Widget voucher (){
-  //   int number,
-  //   String title,
-  //   String description,
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +66,6 @@ class _EnamPageState extends State<EnamPage> {
                   setState(() {
                     _customIcon = expanded;
                     _customText = expanded;
-                    // _customExpansionTile = expanded;
                   });
                 },
               ),

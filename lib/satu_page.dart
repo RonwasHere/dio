@@ -1,6 +1,7 @@
 import 'package:dio/theme/theme_file.dart';
 import 'package:dio/widget/container_member.dart';
 import 'package:dio/widget/container_top5.dart';
+import 'package:dio/widget/container_voucher.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -12,6 +13,11 @@ class SatuPage extends StatefulWidget {
 }
 
 class _SatuPageState extends State<SatuPage> {
+  bool _customIcon = false;
+  bool _customText = false;
+  bool _customText1 = false;
+  bool _customText2 = false;
+  bool _customcolortile = false;
   int _current = 0;
   final CarouselController _controller = CarouselController();
 
@@ -122,12 +128,144 @@ class _SatuPageState extends State<SatuPage> {
               //Container untuk kata kata TOP 5 BULAN JULI 2023
               //code ada di folder container_top5
               ContainerTop5(),
+              SizedBox(height: 10),
+              //container bagian "Voucher Saya"
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  border: Border.all(
+                    color: (Colors.brown[200])!,
+                    width: 2,
+                  ),
+                  // container jgn dikasik warna... nantik bug buat chldren yg bawah
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 5, bottom: 5),
+                      child: Text(
+                        'Voucher Saya',
+                        style: TextStyle(color: kBrownColor),
+                      ),
+                    ),
+                    Divider(
+                      thickness: 4,
+                    ),
+                    //bagian voucher dan children containernnya
+                    ListTileTheme(
+                      // selectedTileColor: kOrangeColor,
+                      // selectedColor: kOrangeColor,
+                      tileColor: _customcolortile ? kOrangeColor : kWhiteColor,
+                      child: ExpansionTile(
+                        collapsedBackgroundColor: kWhiteColor, //posisi awal
+                        collapsedIconColor: kBlackColor,
+                        title: Text(
+                          'SUPRESSO',
+                          style: TextStyle(
+                              color:
+                                  _customText ? kDarkGreyColor : kBlackColor),
+                        ),
+                        trailing: Icon(
+                          _customIcon
+                              ? Icons.keyboard_arrow_up
+                              : Icons.keyboard_arrow_down,
+                        ),
+                        //CUSTOM CONTAINER U/ DISKON, KETERANGAN + TOMBOL CLAIM
+                        children: [
+                          SizedBox(height: 10),
+                          ContainerVoucher(
+                              //method ada di folder widget
+                              number: '1',
+                              title: 'Diskon 10% (DISC 10%)',
+                              subtitle: 'Tukarkan dengan 10 point'),
+                        ],
+                        onExpansionChanged: (bool expanded) {
+                          setState(() {
+                            _customIcon = expanded;
+                            _customText = expanded;
+                            _customcolortile = expanded;
+                          });
+                        },
+                      ),
+                    ),
+                    //listtiletheme2
+                    ListTileTheme2(),
+                    ListTileTheme3(),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
       ),
 
       backgroundColor: kWhiteColor, //untuk warna background
+    );
+  }
+
+  ListTileTheme ListTileTheme3() {
+    return ListTileTheme(
+      tileColor: kOrangeColor,
+      child: ExpansionTile(
+        collapsedBackgroundColor: kWhiteColor,
+        collapsedIconColor: kBlackColor,
+        title: Text(
+          'INDRACO STORE',
+          style: TextStyle(color: _customText2 ? kDarkGreyColor : kBlackColor),
+        ),
+        trailing: Icon(
+          _customIcon ? Icons.keyboard_arrow_up : Icons.keyboard_arrow_down,
+        ),
+        //CUSTOM CONTAINER U/ DISKON, KETERANGAN + TOMBOL CLAIM
+        children: [
+          SizedBox(height: 10),
+          ContainerVoucher(
+              //method ada di folder widget
+              number: '1',
+              title: 'Diskon 10% (DISC 10%)',
+              subtitle: 'Tukarkan dengan 10 point'),
+        ],
+        onExpansionChanged: (bool expanded) {
+          setState(() {
+            _customIcon = expanded;
+            _customText2 = expanded;
+          });
+        },
+      ),
+    );
+  }
+
+  ListTileTheme ListTileTheme2() {
+    return ListTileTheme(
+      tileColor: kOrangeColor,
+      child: ExpansionTile(
+        collapsedBackgroundColor: kWhiteColor,
+        collapsedIconColor: kBlackColor,
+        title: Text(
+          'PANDAN GARDEN',
+          style: TextStyle(color: _customText1 ? kDarkGreyColor : kBlackColor),
+        ),
+        trailing: Icon(
+          _customIcon ? Icons.keyboard_arrow_up : Icons.keyboard_arrow_down,
+        ),
+        //CUSTOM CONTAINER U/ DISKON, KETERANGAN + TOMBOL CLAIM
+        children: [
+          SizedBox(height: 10),
+          ContainerVoucher(
+              //method ada di folder widget
+              number: '1',
+              title: 'Diskon 10% (DISC 10%)',
+              subtitle: 'Tukarkan dengan 10 point'),
+        ],
+        onExpansionChanged: (bool expanded) {
+          setState(() {
+            _customIcon = expanded;
+            _customText1 = expanded;
+          });
+        },
+      ),
     );
   }
 

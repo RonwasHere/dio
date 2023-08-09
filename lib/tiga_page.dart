@@ -52,19 +52,20 @@ class TigaPage extends StatelessWidget {
                 width: MediaQuery.of(context).size.width,
                 child: TextButton(
                   style: TextButton.styleFrom(
-                    backgroundColor: Color(0xffff5002),
+                    backgroundColor: kOrangeColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
                   onPressed: () {
+                    //kasik pengecekan login + api dulu, kalok bener baru push masuk ke hlmn
                     Navigator.pushNamed(context, '/mainscreen');
                   },
                   child: Text(
                     'Sign In ',
                     style: TextStyle(
                       fontSize: 20,
-                      color: Colors.white,
+                      color: kWhiteColor,
                     ),
                   ),
                 ),
@@ -82,7 +83,7 @@ class TigaPage extends StatelessWidget {
           ),
         ),
       ),
-      backgroundColor: Color(0xfffdf8ea),
+      backgroundColor: kWhiteColor,
     );
   }
 }

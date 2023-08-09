@@ -120,3 +120,68 @@
 //                 });
 //               },
 //             ),
+
+
+
+
+
+
+
+
+                    //   child: Padding(
+                    //     padding: const EdgeInsets.all(10.0),
+                    //     child: Column(
+                    //       children: [
+                    //         Container(
+                    //           width: MediaQuery.of(context).size.width,
+                    //           height: 200,
+                    //           decoration: BoxDecoration(
+                    //             borderRadius: BorderRadius.circular(10),
+                    //             border: Border.all(
+                    //               color: kGreyColor,
+                    //               width: 2,
+                    //             ),
+                    //           ),
+                    //           child: Padding(
+                    //             padding: const EdgeInsets.all(8.0),
+                    //             child: Column(
+                    //               children: [
+                    //                 Text(
+                    //                   'TOP 5 BULAN AGUSTUS 2023',
+                    //                   style: TextStyle(
+                    //                     fontSize: 20,
+                    //                     color: kBlackColor,
+                    //                     fontWeight: FontWeight.bold,
+                    //                   ),
+                    //                 ),
+                    //                 SizedBox(height: 10),
+                    //                 Text(
+                    //                   'Data Terakir Terupdate',
+                    //                   style: TextStyle(
+                    //                       fontSize: 15, color: kBlackColor),
+                    //                 ),
+                    //                 Text(
+                    //                   'Dapatkan 10 point untuk setiap kode unik terdaftar dan \nmenangkan hadiah e-wallet @Rp. 2000.000, TOP 5 setiap bulan nya',
+                    //                   style: TextStyle(
+                    //                       fontSize: 15, color: kBlackColor),
+                    //                 ),
+                    //                 // Text('@Rp. 2000.000, TOP 5 setiap bulan nya'),
+                    //                 Text(
+                    //                   'Belum ada TOP 5',
+                    //                   style: TextStyle(
+                    //                       fontSize: 15, color: kBlackColor),
+                    //                 ),
+                    //                 SizedBox(height: 30),
+                    //                 Text(
+                    //                   '*Leader Board ini bersifat sementara dan belum final',
+                    //                   style: TextStyle(
+                    //                       fontSize: 15, color: kBlackColor),
+                    //                 ),
+                    //               ],
+                    //             ),
+                    //           ),
+                    //         ),
+                    //       ],
+                    //     ),
+                    //   ),
+                    // ),

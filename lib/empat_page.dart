@@ -1,7 +1,6 @@
 import 'package:dio/theme/theme_file.dart';
 import 'package:dio/widget/container_profile_member.dart';
 import 'package:flutter/material.dart';
-import 'package:image/image.dart';
 
 class EmpatPage extends StatelessWidget {
   const EmpatPage({super.key});
@@ -82,34 +81,39 @@ class EmpatPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              //button
+              //button Sign out
               SizedBox(height: 20),
-              Container(
-                width: MediaQuery.of(context).size.width,
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    backgroundColor: kOrangeColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                  ),
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/tiga');
-                  },
-                  child: Text(
-                    'Log Out ',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ),
+              ButtonSignOut(context),
             ],
           ),
         ),
       ),
       backgroundColor: kWhiteColor,
+    );
+  }
+
+  //button sign out
+  Container ButtonSignOut(BuildContext context) {
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      child: TextButton(
+        style: TextButton.styleFrom(
+          backgroundColor: kOrangeColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+        ),
+        onPressed: () {
+          Navigator.pushNamed(context, '/tiga');
+        },
+        child: Text(
+          'Sign Out ',
+          style: TextStyle(
+            fontSize: 20,
+            color: Colors.white,
+          ),
+        ),
+      ),
     );
   }
 

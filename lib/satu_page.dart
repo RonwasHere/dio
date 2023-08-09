@@ -25,9 +25,6 @@ class _SatuPageState extends State<SatuPage> {
     'assets/carousel1.jpg',
     'assets/carousel2.jpg',
     // 'assets/coffee.PNG',
-    // 'assets/coffee.PNG',
-    // 'assets/coffee.PNG',
-    // 'assets/coffee.PNG',
   ];
 
   @override
@@ -268,7 +265,7 @@ class _SatuPageState extends State<SatuPage> {
       ),
     );
   }
-
+  //method button submit
   Container button_submit(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,

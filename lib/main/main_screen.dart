@@ -1,8 +1,8 @@
-import 'package:dio/dua_page.dart';
-import 'package:dio/empat_page.dart';
-import 'package:dio/enam_page.dart';
-import 'package:dio/lima_page.dart';
-import 'package:dio/satu_page.dart';
+import 'package:dio/pages/empat_page.dart';
+import 'package:dio/pages/enam_page.dart';
+import 'package:dio/pages/lima_page.dart';
+import 'package:dio/pages/satu_page.dart';
+
 import 'package:dio/theme/theme_file.dart';
 import 'package:flutter/material.dart';
 
